@@ -9,6 +9,26 @@ import {
   setupGracefulShutdown,
 } from "./validation";
 
+const DATA_BY_PAGE_TYPE = {
+  fortiguard: {
+    details: [
+      {
+        title: "URL",
+        value: "%%PROTOCOL%%://%%URL%%",
+      },
+      {
+        title: "Category",
+        value: "%%CATEGORY%%",
+      },
+    ],
+    fortiguard: true,
+  },
+  url: {},
+  applicationcontrol: {},
+  dlp: {},
+  virus: {},
+};
+
 /**
  * Fortinet Block Page Generator CLI
  *
@@ -111,14 +131,7 @@ async function executeBuildAction(
   // Read input
   const inputContent = await fs.promises.readFile(inputFile, "utf8");
 
-  console.log(
-    mustache.render(inputContent, {
-      details: [
-        { title: "URL", value: "https://example.com" },
-        { title: "Category", value: "Example" },
-      ],
-    }),
-  );
+  console.log(mustache.render(inputContent, DATA_BY_PAGE_TYPE.fortiguard));
 
   // TODO: Implement actual build logic here
   // This would typically involve:
