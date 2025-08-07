@@ -1,6 +1,8 @@
 import commander from "commander";
 import colors from "colors";
 import path from "path";
+import fs from "fs";
+import mustache from "mustache";
 import {
   validateCliArgs,
   deriveOutputPath,
@@ -105,8 +107,11 @@ async function executeBuildAction(
   outputDir: string,
 ): Promise<void> {
   console.log(colors.green(`Building block pages from ${inputFile}`));
-  console.log(colors.cyan(`Input file: ${path.resolve(inputFile)}`));
-  console.log(colors.cyan(`Output directory: ${path.resolve(outputDir)}`));
+
+  // Read input
+  const inputContent = await fs.promises.readFile(inputFile, "utf8");
+
+  console.log(mustache.render(inputContent, {}));
 
   // TODO: Implement actual build logic here
   // This would typically involve:
