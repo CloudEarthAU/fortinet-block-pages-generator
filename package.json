@@ -1,0 +1,17 @@
+{
+  "name": "fortinet-block-pages-generator",
+  "version": "1.0.0",
+  "description": "CLI tool to create blocked pages for Fortigate firewalls",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "GPL-3.0-only",
+  "packageManager": "pnpm@10.13.1",
+  "dependencies": {
+    "typescript": "^5.9.2"
+  }
+}
