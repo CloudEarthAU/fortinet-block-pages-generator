@@ -111,7 +111,14 @@ async function executeBuildAction(
   // Read input
   const inputContent = await fs.promises.readFile(inputFile, "utf8");
 
-  console.log(mustache.render(inputContent, {}));
+  console.log(
+    mustache.render(inputContent, {
+      details: [
+        { title: "URL", value: "https://example.com" },
+        { title: "Category", value: "Example" },
+      ],
+    }),
+  );
 
   // TODO: Implement actual build logic here
   // This would typically involve:
