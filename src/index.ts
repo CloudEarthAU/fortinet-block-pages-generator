@@ -131,6 +131,9 @@ async function executeBuildAction(
   // Read input
   const inputContent = await fs.promises.readFile(inputFile, "utf8");
 
+  mustache.escape = function (text) {
+    return text;
+  };
   console.log(mustache.render(inputContent, DATA_BY_PAGE_TYPE.fortiguard));
 
   // TODO: Implement actual build logic here
