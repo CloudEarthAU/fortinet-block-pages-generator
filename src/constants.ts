@@ -1,4 +1,4 @@
-const VARIABLES = [
+export const VARIABLES = [
   {
     variable: "ANTIPHISH_MATCH",
     description: "tag_desc_ANTIPHISH_MATCH",
@@ -493,7 +493,7 @@ const VARIABLES = [
   },
 ];
 
-const PAGE_TYPES = [
+export const PAGE_TYPES = [
   {
     name: "FortiGuard Block Page",
     id: "fortiguard-block-page",
