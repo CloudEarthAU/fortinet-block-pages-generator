@@ -493,9 +493,9 @@ export const VARIABLES = {
   },
 };
 
-export const PAGE_TYPES = [
-  {
+export const PAGE_TYPES = {
+  fortiguard_block_page: {
     name: "FortiGuard Block Page",
-    id: "fortiguard-block-page",
+    fileName: "fortiguard-block-page",
   },
-];
+};
