@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@types/twig':
+        specifier: ^1.12.17
+        version: 1.12.17
       colors:
         specifier: ^1.4.0
         version: 1.4.0
@@ -62,6 +65,9 @@ packages:
 
   '@types/node@24.2.0':
     resolution: {integrity: sha512-3xyG3pMCq3oYCNg7/ZP+E1ooTaGB4cG8JWRsqqOYQdbWNY4zbaV0Ennrd7stjiJEFZCaybcIgpTjJWHRfBSIDw==}
+
+  '@types/twig@1.12.17':
+    resolution: {integrity: sha512-Lxcjgzt4mlDrv1xp1EdoBLPTxpjLAt9vtN3/qoblC5D6hMCYgZJOQHfaT/0gwCcAZENnKQ7Sga28DSsckPWa0g==}
 
   acorn-walk@8.3.4:
     resolution: {integrity: sha512-ueEepnujpqee2o5aIYnvHU6C0A42MNdsIDeqy5BydrkuC5R1ZuUFnm27EeFJGoEHJQgn3uleRvmTXaJgfXbt4g==}
@@ -177,6 +183,8 @@ snapshots:
   '@types/node@24.2.0':
     dependencies:
       undici-types: 7.10.0
+
+  '@types/twig@1.12.17': {}
 
   acorn-walk@8.3.4:
     dependencies:
