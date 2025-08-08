@@ -20,6 +20,7 @@
     "@types/mustache": "^4.2.6",
     "colors": "^1.4.0",
     "commander": "^14.0.0",
-    "mustache": "^4.2.0"
+    "mustache": "^4.2.0",
+    "twig": "^1.17.1"
   }
 }
