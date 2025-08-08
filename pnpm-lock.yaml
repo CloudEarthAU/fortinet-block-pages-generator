@@ -8,18 +8,12 @@ importers:
 
   .:
     dependencies:
-      '@types/mustache':
-        specifier: ^4.2.6
-        version: 4.2.6
       colors:
         specifier: ^1.4.0
         version: 1.4.0
       commander:
         specifier: ^14.0.0
         version: 14.0.0
-      mustache:
-        specifier: ^4.2.0
-        version: 4.2.0
       twig:
         specifier: ^1.17.1
         version: 1.17.1
@@ -65,9 +59,6 @@ packages:
 
   '@tsconfig/node16@1.0.4':
     resolution: {integrity: sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==}
-
-  '@types/mustache@4.2.6':
-    resolution: {integrity: sha512-t+8/QWTAhOFlrF1IVZqKnMRJi84EgkIK5Kh0p2JV4OLywUvCwJPFxbJAl7XAow7DVIHsF+xW9f1MVzg0L6Szjw==}
 
   '@types/node@24.2.0':
     resolution: {integrity: sha512-3xyG3pMCq3oYCNg7/ZP+E1ooTaGB4cG8JWRsqqOYQdbWNY4zbaV0Ennrd7stjiJEFZCaybcIgpTjJWHRfBSIDw==}
@@ -120,10 +111,6 @@ packages:
 
   minimatch@3.0.8:
     resolution: {integrity: sha512-6FsRAQsxQ61mw+qP1ZzbL9Bc78x2p5OqNgNpnoAFLTrX8n5Kxph0CsnhmKKNXTWjXqU5L0pGPR7hYk+XWZr60Q==}
-
-  mustache@4.2.0:
-    resolution: {integrity: sha512-71ippSywq5Yb7/tVYyGbkBggbU8H3u5Rz56fH60jGFgr8uHwxs+aSKeqmluIVzM0m0kB7xQjKS6qPfd0b2ZoqQ==}
-    hasBin: true
 
   ts-node@10.9.2:
     resolution: {integrity: sha512-f0FFpIdcHgn8zcPSbf1dRevwt047YMnaiJM3u2w2RewrB+fob/zePZcrOyQoLMMO7aBIddLcQIEK5dYjkLnGrQ==}
@@ -187,8 +174,6 @@ snapshots:
 
   '@tsconfig/node16@1.0.4': {}
 
-  '@types/mustache@4.2.6': {}
-
   '@types/node@24.2.0':
     dependencies:
       undici-types: 7.10.0
@@ -227,8 +212,6 @@ snapshots:
   minimatch@3.0.8:
     dependencies:
       brace-expansion: 1.1.12
-
-  mustache@4.2.0: {}
 
   ts-node@10.9.2(@types/node@24.2.0)(typescript@5.9.2):
     dependencies:
