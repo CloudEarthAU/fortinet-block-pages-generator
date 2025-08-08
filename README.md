@@ -22,6 +22,12 @@ For example, you could input this
     Access blocked
     {% endif %}
 </h1>
+<div>
+    {% for detail in details %}
+        <b>{{ detail.title }}</b>
+        <p>{{ detail.description }}</p>
+    {% endfor %}
+</div>
 ```
 
 you would get these files as output:
@@ -31,6 +37,12 @@ you would get these files as output:
 <h1>
     Access blocked
 </h1>
+<div>
+    <b>URL</b>
+    <p>https://example.com</p>
+    <b>Category</b>
+    <p>Example</p>
+</div>
 ```
 
 `url-block-page.html`
@@ -38,6 +50,14 @@ you would get these files as output:
 <h1>
     Access blocked
 </h1>
+<div>
+    <b>URL</b>
+    <p>https://example.com</p>
+    <b>Description</b>
+    <p>Request Blocked</p>
+    <b>URL Source</b>
+    <p>Blocking Source</p>
+</div>
 ```
 
 `application-control-block-page.html`
@@ -45,6 +65,16 @@ you would get these files as output:
 <h1>
     Application blocked
 </h1>
+<div>
+    <b>Application</b>
+    <p>Facebook</p>
+    <b>Category</b>
+    <p>Social Media</p>
+    <b>URL</b>
+    <p>https://example.com</p>
+    <b>Policy</b>
+    <p>61F1317D-9A44-4B86-BB0B-201C9A3956C2</p>
+</div>
 ```
 
 `dlp-block-page.html`
@@ -52,6 +82,10 @@ you would get these files as output:
 <h1>
     Transfer attempt blocked
 </h1>
+<div>
+    <b>URL</b>
+    <p>https://example.com</p>
+</div>
 ```
 
 `virus-block-page.html`
@@ -59,6 +93,14 @@ you would get these files as output:
 <h1>
     Virus blocked
 </h1>
+<div>
+    <b>URL</b>
+    <p>https://www.example.com/</p>
+    <b>Quarantined File Name</b>
+    <p>example.exe</p>
+    <b>Reference URL</b>
+    <p>https://fortiguard.com/encyclopedia/virus/1</p>
+</div>
 ```
 </details>
 
