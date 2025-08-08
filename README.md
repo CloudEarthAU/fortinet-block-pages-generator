@@ -7,8 +7,9 @@ A simple CLI tool to generate Fortinet block pages from an HTML template.
 2. Allows templates to be used to show/hide elements based on the page type
 
 <details>
-<summary>## An example</summary>
+<summary><h3>An example</h3></summary>
 For example, you could input this
+
 ```html
 <h1>
     {% if type == "dlp" %}
