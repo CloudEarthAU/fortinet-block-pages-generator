@@ -2,32 +2,11 @@ import commander from "commander";
 import colors from "colors";
 import path from "path";
 import fs from "fs";
-import mustache from "mustache";
 import {
   validateCliArgs,
   deriveOutputPath,
   setupGracefulShutdown,
 } from "./validation";
-
-const DATA_BY_PAGE_TYPE = {
-  fortiguard: {
-    details: [
-      {
-        title: "URL",
-        value: "%%PROTOCOL%%://%%URL%%",
-      },
-      {
-        title: "Category",
-        value: "%%CATEGORY%%",
-      },
-    ],
-    fortiguard: true,
-  },
-  url: {},
-  applicationcontrol: {},
-  dlp: {},
-  virus: {},
-};
 
 /**
  * Fortinet Block Page Generator CLI
@@ -130,11 +109,6 @@ async function executeBuildAction(
 
   // Read input
   const inputContent = await fs.promises.readFile(inputFile, "utf8");
-
-  mustache.escape = function (text) {
-    return text;
-  };
-  console.log(mustache.render(inputContent, DATA_BY_PAGE_TYPE.fortiguard));
 
   // TODO: Implement actual build logic here
   // This would typically involve:
