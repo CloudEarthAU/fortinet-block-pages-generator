@@ -5,6 +5,7 @@ A simple CLI tool to generate Fortinet block pages from an HTML template.
 ## What this does
 1. Inlines resources, such as CSS and JavaScript files.
 2. Allows templates to be used to show/hide elements based on the page type
+3. Runs a server to preview the generated pages
 
 <details>
 <summary><h3>An example</h3></summary>
