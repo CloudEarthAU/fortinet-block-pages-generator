@@ -16,11 +16,26 @@ const VARIABLES = [
     description:
       "Displays the name of the application blocked in the FortiGuard Application Control block page.",
   },
-  { variable: "AP_IP", description: "tag_desc_AP_IP" },
-  { variable: "AP_MAC", description: "tag_desc_AP_MAC" },
-  { variable: "AP_NAME", description: "tag_desc_AP_NAME" },
-  { variable: "AP_SSID", description: "tag_desc_AP_SSID" },
-  { variable: "AUTHORITY", description: "Displays the Certificate Authority." },
+  {
+    variable: "AP_IP",
+    description: "tag_desc_AP_IP",
+  },
+  {
+    variable: "AP_MAC",
+    description: "tag_desc_AP_MAC",
+  },
+  {
+    variable: "AP_NAME",
+    description: "tag_desc_AP_NAME",
+  },
+  {
+    variable: "AP_SSID",
+    description: "tag_desc_AP_SSID",
+  },
+  {
+    variable: "AUTHORITY",
+    description: "Displays the Certificate Authority.",
+  },
   {
     variable: "AUTH_POST_URL",
     description: "The URL to POST log in credentials.",
@@ -38,8 +53,14 @@ const VARIABLES = [
     variable: "AUTOMATION_STITCH_NAME",
     description: "Name of the automation stitch.",
   },
-  { variable: "CASB_PROFILE", description: "tag_desc_CASB_PROFILE" },
-  { variable: "CASB_SAAS_APP", description: "tag_desc_CASB_SAAS_APP" },
+  {
+    variable: "CASB_PROFILE",
+    description: "tag_desc_CASB_PROFILE",
+  },
+  {
+    variable: "CASB_SAAS_APP",
+    description: "tag_desc_CASB_SAAS_APP",
+  },
   {
     variable: "CASB_USER_ACTIVITY",
     description: "tag_desc_CASB_USER_ACTIVITY",
@@ -48,14 +69,26 @@ const VARIABLES = [
     variable: "CATEGORY",
     description: "Displays the FortiGuard Category of a website.",
   },
-  { variable: "CERT_CHAIN", description: "tag_desc_CERT_CHAIN" },
+  {
+    variable: "CERT_CHAIN",
+    description: "tag_desc_CERT_CHAIN",
+  },
   {
     variable: "CN",
     description: "Displays the Common Name of the certificate.",
   },
-  { variable: "COMMENT", description: "tag_desc_COMMENT" },
-  { variable: "COMPANY", description: "The guest user's company name." },
-  { variable: "CONTENTTYPE", description: "Content type." },
+  {
+    variable: "COMMENT",
+    description: "tag_desc_COMMENT",
+  },
+  {
+    variable: "COMPANY",
+    description: "The guest user's company name.",
+  },
+  {
+    variable: "CONTENTTYPE",
+    description: "Content type.",
+  },
   {
     variable: "CPAUTH_INTF",
     description:
@@ -76,7 +109,10 @@ const VARIABLES = [
     description:
       "The IP address of the device attempting to receive the blocked file.",
   },
-  { variable: "DEVICE_TYPE", description: "tag_desc_DEVICE_TYPE" },
+  {
+    variable: "DEVICE_TYPE",
+    description: "tag_desc_DEVICE_TYPE",
+  },
   {
     variable: "DST_ADDR_LABEL",
     description: "The destination URL that the user entered.",
@@ -86,8 +122,14 @@ const VARIABLES = [
     description:
       "The amount of time in the reporting period. You can set this in the user defined protection profile. (FortiOS Carrier only)",
   },
-  { variable: "EMAIL", description: "The guest's email address." },
-  { variable: "EMAIL_CREDENTIALS", description: "The email's credentials." },
+  {
+    variable: "EMAIL",
+    description: "The guest's email address.",
+  },
+  {
+    variable: "EMAIL_CREDENTIALS",
+    description: "The email's credentials.",
+  },
   {
     variable: "EMAIL_FROM",
     description:
@@ -98,7 +140,10 @@ const VARIABLES = [
     description:
       "The email address of the intended receiver of the message that the FortiGate removed the file from.",
   },
-  { variable: "END_VALID", description: "The date the certificate expires." },
+  {
+    variable: "END_VALID",
+    description: "The date the certificate expires.",
+  },
   {
     variable: "EXPIRE",
     description: "Specifies the time until the credential expires.",
@@ -116,7 +161,10 @@ const VARIABLES = [
     variable: "FEATURE_BLOCK_REASONS",
     description: "Displays text explaining why the feature is blocked.",
   },
-  { variable: "FGT_HOSTNAME", description: "Displays the FortiGate hostname." },
+  {
+    variable: "FGT_HOSTNAME",
+    description: "Displays the FortiGate hostname.",
+  },
   {
     variable: "FILE",
     description:
@@ -130,18 +178,42 @@ const VARIABLES = [
     variable: "FORTINET",
     description: "Displays the following text: FORTINET.",
   },
-  { variable: "FTCL_VPN_NAME", description: "tag_desc_FTCL_VPN_NAME" },
-  { variable: "GROUPNAME", description: "The user group." },
-  { variable: "HEMAIL_ACTION", description: "tag_desc_HEMAIL_ACTION" },
-  { variable: "HEMAIL_METHOD", description: "tag_desc_HEMAIL_METHOD" },
-  { variable: "HOSTNAME", description: "The URL address of host website." },
-  { variable: "HTTP_ERR_CODE", description: "The returned HTTP error code." },
+  {
+    variable: "FTCL_VPN_NAME",
+    description: "tag_desc_FTCL_VPN_NAME",
+  },
+  {
+    variable: "GROUPNAME",
+    description: "The user group.",
+  },
+  {
+    variable: "HEMAIL_ACTION",
+    description: "tag_desc_HEMAIL_ACTION",
+  },
+  {
+    variable: "HEMAIL_METHOD",
+    description: "tag_desc_HEMAIL_METHOD",
+  },
+  {
+    variable: "HOSTNAME",
+    description: "The URL address of host website.",
+  },
+  {
+    variable: "HTTP_ERR_CODE",
+    description: "The returned HTTP error code.",
+  },
   {
     variable: "HTTP_ERR_DESC",
     description: "The returned HTTP error message.",
   },
-  { variable: "ICAP_ERR_DESC", description: "tag_desc_ICAP_ERR_DESC" },
-  { variable: "IPS_DESC", description: "tag_desc_IPS_DESC" },
+  {
+    variable: "ICAP_ERR_DESC",
+    description: "tag_desc_ICAP_ERR_DESC",
+  },
+  {
+    variable: "IPS_DESC",
+    description: "tag_desc_IPS_DESC",
+  },
   {
     variable: "LAST_FAILED_LOGIN",
     description: "Displays the user's last failed login time.",
@@ -155,7 +227,10 @@ const VARIABLES = [
     description:
       "This link takes the user to the FortiClient Host Security install page to download the Endpoint Control feature.",
   },
-  { variable: "MIN_LENGTH", description: "tag_desc_MIN_LENGTH" },
+  {
+    variable: "MIN_LENGTH",
+    description: "tag_desc_MIN_LENGTH",
+  },
   {
     variable: "MIN_LOWER_LETTER_LENGTH",
     description: "tag_desc_MIN_LOWER_LETTER_LENGTH",
@@ -168,7 +243,10 @@ const VARIABLES = [
     variable: "MIN_NUMERIC_LENGTH",
     description: "tag_desc_MIN_NUMERIC_LENGTH",
   },
-  { variable: "MIN_UNIQUE_CHAR", description: "tag_desc_MIN_UNIQUE_CHAR" },
+  {
+    variable: "MIN_UNIQUE_CHAR",
+    description: "tag_desc_MIN_UNIQUE_CHAR",
+  },
   {
     variable: "MIN_UPPER_LETTER_LENGTH",
     description: "tag_desc_MIN_UPPER_LETTER_LENGTH",
@@ -190,16 +268,31 @@ const VARIABLES = [
     description:
       "The link to the FortiGuard Web filtering override form. Displays only for users belonging to groups with permission to create FortiGuard web filtering overrides.",
   },
-  { variable: "PAGE_NUM", description: "tag_desc_PAGE_NUM" },
+  {
+    variable: "PAGE_NUM",
+    description: "tag_desc_PAGE_NUM",
+  },
   {
     variable: "PASSWORD",
     description:
       "The input type for a text entry field that prompts users to enter authentication credentials to login, in this case a password.",
   },
-  { variable: "POLICY_ID", description: "tag_desc_POLICY_ID" },
-  { variable: "POLICY_UUID", description: "tag_desc_POLICY_UUID" },
-  { variable: "PORTAL_ADDR", description: "tag_desc_PORTAL_ADDR" },
-  { variable: "PREVENT_REUSE", description: "tag_desc_PREVENT_REUSE" },
+  {
+    variable: "POLICY_ID",
+    description: "tag_desc_POLICY_ID",
+  },
+  {
+    variable: "POLICY_UUID",
+    description: "tag_desc_POLICY_UUID",
+  },
+  {
+    variable: "PORTAL_ADDR",
+    description: "tag_desc_PORTAL_ADDR",
+  },
+  {
+    variable: "PREVENT_REUSE",
+    description: "tag_desc_PREVENT_REUSE",
+  },
   {
     variable: "PRINT_CREDENTIALS",
     description:
@@ -210,7 +303,10 @@ const VARIABLES = [
     description:
       "The protocol (HTTP, FTP, FTP, POP3, IMAP, SMTP) in which the FortiGate detected the virus.",
   },
-  { variable: "PROTOURI", description: "tag_desc_PROTOURI" },
+  {
+    variable: "PROTOURI",
+    description: "tag_desc_PROTOURI",
+  },
   {
     variable: "QUARFILENAME",
     description:
@@ -226,7 +322,10 @@ const VARIABLES = [
     description:
       "Displays information about the traffic shaping quota setting that is blocking the user.",
   },
-  { variable: "RATING_METHOD", description: "tag_desc_RATING_METHOD" },
+  {
+    variable: "RATING_METHOD",
+    description: "tag_desc_RATING_METHOD",
+  },
   {
     variable: "SECURE_WEBPROXY_CERT_INFO",
     description: "tag_desc_SECURE_WEBPROXY_CERT_INFO",
@@ -243,7 +342,10 @@ const VARIABLES = [
     variable: "SERVICE",
     description: "The name of the web filtering service.",
   },
-  { variable: "SNI", description: "tag_desc_SNI" },
+  {
+    variable: "SNI",
+    description: "tag_desc_SNI",
+  },
   {
     variable: "SOURCE_IP",
     description:
@@ -292,7 +394,10 @@ const VARIABLES = [
     variable: "START_VALID",
     description: "The certificate is not valid before this start date.",
   },
-  { variable: "SUBJECT", description: "tag_desc_SUBJECT" },
+  {
+    variable: "SUBJECT",
+    description: "tag_desc_SUBJECT",
+  },
   {
     variable: "TIMEOUT",
     description:
@@ -311,7 +416,10 @@ const VARIABLES = [
     variable: "URLFILTER_ERROR_DETAIL",
     description: "The reason for the web filtering service error.",
   },
-  { variable: "URL_SOURCE", description: "tag_desc_URL_SOURCE" },
+  {
+    variable: "URL_SOURCE",
+    description: "tag_desc_URL_SOURCE",
+  },
   {
     variable: "USERID",
     description:
@@ -322,17 +430,35 @@ const VARIABLES = [
     description:
       "The text entry field where a user can enter his or her username credential to login.",
   },
-  { variable: "USER_IP", description: "tag_desc_USER_IP" },
-  { variable: "USER_MAC", description: "tag_desc_USER_MAC" },
-  { variable: "VIDEOFILTER_DESC", description: "tag_desc_VIDEOFILTER_DESC" },
+  {
+    variable: "USER_IP",
+    description: "tag_desc_USER_IP",
+  },
+  {
+    variable: "USER_MAC",
+    description: "tag_desc_USER_MAC",
+  },
+  {
+    variable: "VIDEOFILTER_DESC",
+    description: "tag_desc_VIDEOFILTER_DESC",
+  },
   {
     variable: "VIRUS",
     description:
       "The name of the virus that the antivirus system found in a file.",
   },
-  { variable: "VIRUS_REF_URL", description: "Displays a virus reference URL." },
-  { variable: "WAF_DESC", description: "tag_desc_WAF_DESC" },
-  { variable: "WAF_SIG_ID", description: "tag_desc_WAF_SIG_ID" },
+  {
+    variable: "VIRUS_REF_URL",
+    description: "Displays a virus reference URL.",
+  },
+  {
+    variable: "WAF_DESC",
+    description: "tag_desc_WAF_DESC",
+  },
+  {
+    variable: "WAF_SIG_ID",
+    description: "tag_desc_WAF_SIG_ID",
+  },
   {
     variable: "WEBPROXY_AUTH_FAIL_COMMENT",
     description: "tag_desc_WEBPROXY_AUTH_FAIL_COMMENT",
@@ -341,12 +467,30 @@ const VARIABLES = [
     variable: "WEBPROXY_AUTH_FAIL_REASON",
     description: "tag_desc_WEBPROXY_AUTH_FAIL_REASON",
   },
-  { variable: "ZTNA_CERT_INFO", description: "tag_desc_ZTNA_CERT_INFO" },
-  { variable: "ZTNA_DEV_INFO", description: "tag_desc_ZTNA_DEV_INFO" },
-  { variable: "ZTNA_DEV_TAGS", description: "tag_desc_ZTNA_DEV_TAGS" },
-  { variable: "ZTNA_ERROR_CODE", description: "tag_desc_ZTNA_ERROR_CODE" },
-  { variable: "ZTNA_REQ_TIME", description: "tag_desc_ZTNA_REQ_TIME" },
-  { variable: "ZTNA_USER_NAME", description: "tag_desc_ZTNA_USER_NAME" },
+  {
+    variable: "ZTNA_CERT_INFO",
+    description: "tag_desc_ZTNA_CERT_INFO",
+  },
+  {
+    variable: "ZTNA_DEV_INFO",
+    description: "tag_desc_ZTNA_DEV_INFO",
+  },
+  {
+    variable: "ZTNA_DEV_TAGS",
+    description: "tag_desc_ZTNA_DEV_TAGS",
+  },
+  {
+    variable: "ZTNA_ERROR_CODE",
+    description: "tag_desc_ZTNA_ERROR_CODE",
+  },
+  {
+    variable: "ZTNA_REQ_TIME",
+    description: "tag_desc_ZTNA_REQ_TIME",
+  },
+  {
+    variable: "ZTNA_USER_NAME",
+    description: "tag_desc_ZTNA_USER_NAME",
+  },
 ];
 
 const PAGE_TYPES = [
