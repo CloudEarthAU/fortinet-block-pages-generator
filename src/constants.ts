@@ -1,4 +1,4 @@
-export const variABLES = {
+export const VARIABLES = {
   antiphish_match: {
     variable: "ANTIPHISH_MATCH",
     description: "tag_desc_ANTIPHISH_MATCH",
