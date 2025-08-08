@@ -1,3 +1,6 @@
+> [!NOTE]
+> This project is still a work in progress.
+
 # fortinet-block-pages-generator
 
 A simple CLI tool to generate Fortinet block pages from an HTML template.
