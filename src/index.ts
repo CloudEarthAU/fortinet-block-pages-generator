@@ -36,7 +36,11 @@ program
             process.exit(1);
           }
         }
-        if (files.includes("index.html") || files.includes("images")) {
+        if (
+          files.includes("index.html") ||
+          files.includes("images") ||
+          files.includes("build")
+        ) {
           if (options.force) {
             // Runs if -f is used
             console.log(
@@ -59,6 +63,10 @@ program
     // Create images if it doesn't exist
     if (!fs.existsSync(path.join(name, "images"))) {
       await fsPromises.mkdir(path.join(name, "images"));
+    }
+    // Create build if it doesn't exist
+    if (!fs.existsSync(path.join(name, "build"))) {
+      await fsPromises.mkdir(path.join(name, "build"));
     }
     // Write config file
     await fsPromises.writeFile(
