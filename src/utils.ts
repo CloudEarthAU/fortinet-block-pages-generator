@@ -14,7 +14,12 @@ export function getTemplateData(
 
   const details = pageData.details.map((detail) => ({
     title: detail.title,
-    value: _type == "dev" ? detail.value.default : detail.value,
+    value: _type == "dev" ? detail.value.default : detail.value.variable,
+  }));
+  const actions = pageData.actions.map((action) => ({
+    title: action.title,
+    location:
+      _type == "dev" ? action.location.default : action.location.variable,
   }));
 
   return { variables, name: pageData.name, type: _page };
