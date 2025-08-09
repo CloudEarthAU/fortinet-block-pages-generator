@@ -618,5 +618,17 @@ export const PAGE_TYPES = {
   fortiguard_block_page: {
     name: "FortiGuard Block Page",
     fileName: "fortiguard-block-page",
+    details: [
+      {
+        title: "URL",
+        default: `${VARIABLES.protocol.default}://${VARIABLES.url.default}`,
+        value: `%%PROTOCOL%%://%%URL%%`,
+      },
+      {
+        title: "Category",
+        default: VARIABLES.category.default,
+        value: `%%CATEGORY%%`,
+      },
+    ],
   },
 };
