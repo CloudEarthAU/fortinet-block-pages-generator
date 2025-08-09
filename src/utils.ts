@@ -22,5 +22,5 @@ export function getTemplateData(
       _type == "dev" ? action.location.default : action.location.variable,
   }));
 
-  return { variables, name: pageData.name, type: _page };
+  return { variables, name: pageData.name, type: _page, actions, details };
 }
