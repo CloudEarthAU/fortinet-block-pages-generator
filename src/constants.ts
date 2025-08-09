@@ -621,13 +621,17 @@ export const PAGE_TYPES = {
     details: [
       {
         title: "URL",
-        default: `${VARIABLES.protocol.default}://${VARIABLES.url.default}`,
-        value: `%%PROTOCOL%%://%%URL%%`,
+        value: {
+          default: `${VARIABLES.protocol.default}://${VARIABLES.url.default}`,
+          variable: `%%PROTOCOL%%://%%URL%%`,
+        },
       },
       {
         title: "Category",
-        default: VARIABLES.category.default,
-        value: `%%CATEGORY%%`,
+        value: {
+          default: VARIABLES.category.default,
+          variable: `%%CATEGORY%%`,
+        },
       },
     ],
     actions: [
