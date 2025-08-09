@@ -630,5 +630,6 @@ export const PAGE_TYPES = {
         value: `%%CATEGORY%%`,
       },
     ],
+    actions: [],
   },
 };
