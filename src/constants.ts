@@ -630,6 +630,14 @@ export const PAGE_TYPES = {
         value: `%%CATEGORY%%`,
       },
     ],
-    actions: [],
+    actions: [
+      {
+        title: "Learn More",
+        location: {
+          default: VARIABLES.virus_ref_url.default,
+          variable: "%%VIRUS_REF_URL%%",
+        },
+      },
+    ],
   },
 };
