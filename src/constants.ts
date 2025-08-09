@@ -1,3 +1,5 @@
+export const CONFIG_FILE = "block-pages-generator.json";
+
 export const VARIABLES = {
   antiphish_match: {
     variable: "ANTIPHISH_MATCH",

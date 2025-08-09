@@ -2,6 +2,7 @@ import { Command } from "commander";
 import fs from "fs";
 import fsPromises from "fs/promises";
 import path from "path";
+import { CONFIG_FILE } from "./constants";
 
 const program = new Command();
 program
@@ -24,7 +25,7 @@ program
         // List files
         const files = await fsPromises.readdir(name);
         // Check if project is already initialised
-        if (files.includes("block-pages-generator.json")) {
+        if (files.includes(CONFIG_FILE)) {
           if (options.force) {
             // Runs if -f is used
             console.log(`Project ${name} already exists, overwriting`);
@@ -61,7 +62,7 @@ program
     }
     // Write config file
     await fsPromises.writeFile(
-      path.join(name, "block-pages-generator.json"),
+      path.join(name, CONFIG_FILE),
       JSON.stringify(
         {
           main: "./index.html",
