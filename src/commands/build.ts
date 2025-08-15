@@ -1,5 +1,6 @@
 import path from "path";
 import fs from "fs";
+import { CONFIG_FILE } from "../constants";
 
 export async function build(
   inputtedFolder: string,
@@ -13,6 +14,12 @@ export async function build(
     process.exit(1);
   }
 
+  if (!fs.existsSync(path.join(folder, CONFIG_FILE))) {
+    console.log(
+      "Configuration file not found, this is probably not a Fortinet Block Page Generator project",
+    );
+    process.exit(1);
+  }
   if (!fs.existsSync(output)) {
     console.log(`Output folder ${output} does not exist, creating`);
     fs.mkdirSync(output);
