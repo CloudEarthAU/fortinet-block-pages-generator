@@ -1,6 +1,6 @@
 import path from "path";
 import fs from "fs";
-import { CONFIG_FILE } from "../constants";
+import { CONFIG_FILE, PAGE_TYPES } from "../constants";
 
 export async function build(
   inputtedFolder: string,
@@ -28,4 +28,9 @@ export async function build(
   console.log(
     `Building project in ./${path.relative(process.cwd(), folder)} to ./${path.relative(process.cwd(), output)}`,
   );
+
+  Object.entries(PAGE_TYPES).forEach(([type, value]) => {
+    console.log(`Building ${type}`);
+    fs.writeFileSync(path.join(output, `${value.fileName}.html`), value.name);
+  });
 }
