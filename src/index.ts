@@ -17,14 +17,14 @@ program
 program
   .command("dev")
   .description("Run a live development server")
-  .argument("<folder>", "project folder (default: current directory)")
+  .argument("[folder]", "project folder (default: current directory)")
   .option("-p, --port", "port to listen on (default: 3000)")
   .option("-o, --open", "open in web browser");
 program
   .command("build")
   .description("Build the Fortinet block page")
-  .argument("<folder>", "project folder (default: current directory)")
-  .argument("<output>", "output file (default: output/index.html)")
+  .argument("[folder]", "project folder (default: current directory)")
+  .argument("[output]", "output file (default: output/index.html)")
   .action(build);
 
 program.parse();
