@@ -1,7 +1,7 @@
 import fs from "fs";
 import fsPromises from "fs/promises";
 import path from "path";
-import { CONFIG_FILE } from "./constants";
+import { CONFIG_FILE } from "../constants";
 
 export async function init(projectName: string, options: any): Promise<void> {
   console.log(`Initialising project ${projectName}`);
