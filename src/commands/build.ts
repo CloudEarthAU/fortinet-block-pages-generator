@@ -33,13 +33,13 @@ export async function build(
   );
 
   // Loop through all page types
-  Object.entries(PAGE_TYPES).forEach(([type, value]) => {
+  Object.entries(PAGE_TYPES).forEach(async ([type, value]) => {
     console.log(`Building ${type}`);
-    generatePage(
+    const page = await generatePage(
       type as keyof typeof PAGE_TYPES,
       "build",
       path.join(folder, "index.html"),
     );
-    fs.writeFileSync(path.join(output, `${value.fileName}.html`), value.name);
+    fs.writeFileSync(path.join(output, `${value.fileName}.html`), page);
   });
 }

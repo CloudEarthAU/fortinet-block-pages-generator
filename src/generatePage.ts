@@ -13,14 +13,9 @@ export default async function generatePage(
     process.exit(1);
   }
 
-  const html = await new Promise((resolve, reject) => {
+  const html = await new Promise<string>((resolve, reject) => {
     Twig.renderFile(path, getTemplateData(type, env), (err, html) => {
-      if (err) {
-        console.error(err);
-        reject(err);
-      } else {
-        resolve(html);
-      }
+      resolve(html);
     });
   });
 
