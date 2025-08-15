@@ -1,5 +1,6 @@
 import { Command } from "commander";
 import { init } from "./commands/init";
+import { build } from "./commands/build";
 
 const program = new Command();
 program
@@ -23,6 +24,7 @@ program
   .command("build")
   .description("Build the Fortinet block page")
   .option("-f, --folder", "project folder (default: current directory)")
-  .option("-o, --output", "output file (default: output/index.html)");
+  .option("-o, --output", "output file (default: output/index.html)")
+  .action(build);
 
 program.parse();
