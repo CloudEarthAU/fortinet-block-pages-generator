@@ -1,6 +1,7 @@
 import path from "path";
 import fs from "fs";
 import { CONFIG_FILE, PAGE_TYPES } from "../constants";
+import generatePage from "../generatePage";
 
 export async function build(
   inputtedFolder: string,
@@ -34,6 +35,11 @@ export async function build(
   // Loop through all page types
   Object.entries(PAGE_TYPES).forEach(([type, value]) => {
     console.log(`Building ${type}`);
+    generatePage(
+      type as keyof typeof PAGE_TYPES,
+      "build",
+      path.join(folder, "index.html"),
+    );
     fs.writeFileSync(path.join(output, `${value.fileName}.html`), value.name);
   });
 }
