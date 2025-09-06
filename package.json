@@ -17,10 +17,13 @@
     "typescript": "^5.9.2"
   },
   "dependencies": {
+    "@types/html-minifier-terser": "^7.0.2",
     "@types/twig": "^1.12.17",
     "colors": "^1.4.0",
     "commander": "^14.0.0",
+    "html-minifier-terser": "^7.2.0",
     "inline-source": "^8.0.3",
+    "install": "^0.13.0",
     "twig": "^1.17.1"
   }
 }
