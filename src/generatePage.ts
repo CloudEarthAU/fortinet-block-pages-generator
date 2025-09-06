@@ -22,6 +22,7 @@ export default async function generatePage(
     compress: true,
     rootpath: directory,
     attribute: false,
+    swallowErrors: true,
   });
 
   const htmlWithTemplates = Twig.twig({
