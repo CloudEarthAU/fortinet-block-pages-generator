@@ -2,13 +2,15 @@ import path from "path";
 import fs from "fs";
 import { CONFIG_FILE, PAGE_TYPES } from "../constants";
 import generatePage from "../generatePage";
+import chokidar from "chokidar";
+import browserSync from "browser-sync";
 
 export async function build(
   inputtedFolder: string,
   inputtedOutput: string,
 ): Promise<any> {
   const folder = path.resolve(inputtedFolder || process.cwd());
-  const output = path.resolve(inputtedOutput || path.join(folder, "build"));
+  const output = path.resolve(inputtedOutput || path.join(folder, "dev"));
 
   // Check if folder exists and is a project
   if (!fs.existsSync(folder)) {
@@ -29,17 +31,23 @@ export async function build(
   }
 
   console.log(
-    `Building project in ./${path.relative(process.cwd(), folder)} to ./${path.relative(process.cwd(), output)}`,
+    `Running dev server in ./${path.relative(process.cwd(), folder)}`,
   );
 
   // Loop through all page types
-  Object.entries(PAGE_TYPES).forEach(async ([type, value]) => {
-    console.log(`Building ${type}`);
-    const page = await generatePage(
-      type as keyof typeof PAGE_TYPES,
-      "build",
-      path.join(folder, "index.html"),
-    );
-    fs.writeFileSync(path.join(output, `${value.fileName}.html`), page);
-  });
+  const generate = () => {
+    Object.entries(PAGE_TYPES).forEach(async ([type, value]) => {
+      console.log(`Building ${type}`);
+      const page = await generatePage(
+        type as keyof typeof PAGE_TYPES,
+        "dev",
+        path.join(folder, "index.html"),
+      );
+      fs.writeFileSync(path.join(output, `${value.fileName}.html`), page);
+    });
+  };
+
+  generate();
+
+  browserSync.init({ server: output });
 }
