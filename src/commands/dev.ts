@@ -47,5 +47,6 @@ export async function dev(inputtedFolder: string, options: any): Promise<any> {
   };
 
   generate();
-  serve({ root: output, port, open, wait: 1000 });
+  serve({ root: output, port, open, wait: 100 });
+  chokidar.watch(folder).on("change", generate);
 }
