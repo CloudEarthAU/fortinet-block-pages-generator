@@ -131,6 +131,6 @@ fortinet-block-pages-generator build
 
 ## AI code
 
-A lot of this code was written by AI. This is because I use AI for refactoring and adding better error handling (basically things I don't want to do myself).
+Some of this code was written by AI. This is because I use AI for refactoring and adding better error handling (basically things I don't want to do myself). Also I use AI completions in my editor.
 
-I (@Inglan) have prefixed any commits that use AI with `[With AI]` or similar.
+I (@Inglan) have prefixed any commits that primarily use AI with `[With AI]` or similar.
