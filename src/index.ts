@@ -19,7 +19,7 @@ program
   .command("dev")
   .description("Run a live development server")
   .argument("[folder]", "project folder (default: current directory)")
-  .option("-p, --port", "port to listen on (default: 3000)")
+  .option("-p, --port <number>", "port to listen on (default: 3000)")
   .option("-o, --open", "open in web browser")
   .action(dev);
 program
