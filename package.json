@@ -17,8 +17,11 @@
     "typescript": "^5.9.2"
   },
   "dependencies": {
+    "@types/browser-sync": "^2.29.0",
     "@types/html-minifier-terser": "^7.0.2",
     "@types/twig": "^1.12.17",
+    "browser-sync": "^3.0.4",
+    "chokidar": "^4.0.3",
     "colors": "^1.4.0",
     "commander": "^14.0.0",
     "html-minifier-terser": "^7.2.0",
