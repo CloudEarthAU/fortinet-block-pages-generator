@@ -4,6 +4,7 @@ import path from "path";
 import { inlineSource } from "inline-source";
 import { PAGE_TYPES, VARIABLES } from "./constants";
 import { getTemplateData } from "./utils";
+import { minify } from "html-minifier-terser";
 
 export default async function generatePage(
   type: keyof typeof PAGE_TYPES,
@@ -23,9 +24,16 @@ export default async function generatePage(
     attribute: false,
   });
 
-  const html = Twig.twig({
+  const htmlWithTemplates = Twig.twig({
     data: inlinedHtml,
   }).render(getTemplateData(type, env));
 
-  return html;
+  const minifiedHtml = await minify(htmlWithTemplates, {
+    collapseWhitespace: true,
+    removeComments: true,
+    minifyCSS: true,
+    minifyJS: true,
+  });
+
+  return minifiedHtml;
 }
