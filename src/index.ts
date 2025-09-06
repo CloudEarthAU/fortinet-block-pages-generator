@@ -1,6 +1,7 @@
 import { Command } from "commander";
 import { init } from "./commands/init";
 import { build } from "./commands/build";
+import { dev } from "./commands/dev";
 
 const program = new Command();
 program
@@ -19,7 +20,8 @@ program
   .description("Run a live development server")
   .argument("[folder]", "project folder (default: current directory)")
   .option("-p, --port", "port to listen on (default: 3000)")
-  .option("-o, --open", "open in web browser");
+  .option("-o, --open", "open in web browser")
+  .action(dev);
 program
   .command("build")
   .description("Build the Fortinet block page")

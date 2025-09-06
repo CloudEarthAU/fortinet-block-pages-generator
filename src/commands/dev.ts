@@ -5,12 +5,11 @@ import generatePage from "../generatePage";
 import chokidar from "chokidar";
 import browserSync from "browser-sync";
 
-export async function dev(
-  inputtedFolder: string,
-  inputtedOutput: string,
-): Promise<any> {
+export async function dev(inputtedFolder: string, options: any): Promise<any> {
   const folder = path.resolve(inputtedFolder || process.cwd());
-  const output = path.resolve(inputtedOutput || path.join(folder, "dev"));
+  const output = path.resolve(path.join(folder, "dev"));
+  const port = options.port || 3000;
+  const open = options.open || false;
 
   // Check if folder exists and is a project
   if (!fs.existsSync(folder)) {
