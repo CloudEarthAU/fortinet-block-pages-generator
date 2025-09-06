@@ -3,7 +3,7 @@ import fs from "fs";
 import { CONFIG_FILE, PAGE_TYPES } from "../constants";
 import generatePage from "../generatePage";
 import chokidar from "chokidar";
-import browserSync from "browser-sync";
+import { start as serve } from "live-server";
 
 export async function dev(inputtedFolder: string, options: any): Promise<any> {
   const folder = path.resolve(inputtedFolder || process.cwd());
@@ -47,6 +47,5 @@ export async function dev(inputtedFolder: string, options: any): Promise<any> {
   };
 
   generate();
-
-  browserSync.init({ server: output });
+  serve({ root: output, port, open, wait: 1000 });
 }
