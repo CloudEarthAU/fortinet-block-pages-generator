@@ -48,5 +48,9 @@ export async function dev(inputtedFolder: string, options: any): Promise<any> {
 
   generate();
   serve({ root: output, port, open, wait: 100 });
-  chokidar.watch(folder).on("change", generate);
+  chokidar.watch(folder, { ignored: "" }).on("change", (filename) => {
+    if (!(filename.split("/")[filename.split("/").length - 2] === "dev")) {
+      generate();
+    }
+  });
 }
