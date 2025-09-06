@@ -55,7 +55,7 @@ export async function init(projectName: string, options: any): Promise<void> {
       await fsPromises.mkdir(projectName);
     }
     // Ensure required subdirectories exist
-    const requiredDirs = ["images", "build"];
+    const requiredDirs = ["images", "build", "dev"];
     for (const dirName of requiredDirs) {
       const dirPath = path.join(projectName, dirName);
       if (!fs.existsSync(dirPath)) {
