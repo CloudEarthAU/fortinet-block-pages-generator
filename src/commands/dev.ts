@@ -5,7 +5,7 @@ import generatePage from "../generatePage";
 import chokidar from "chokidar";
 import browserSync from "browser-sync";
 
-export async function build(
+export async function dev(
   inputtedFolder: string,
   inputtedOutput: string,
 ): Promise<any> {
