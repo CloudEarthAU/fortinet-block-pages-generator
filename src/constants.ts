@@ -1,3 +1,5 @@
+import { PageType } from "./types";
+
 export const CONFIG_FILE = "block-pages-generator.json";
 
 export const VARIABLES = {
@@ -616,7 +618,7 @@ export const VARIABLES = {
   },
 };
 
-export const PAGE_TYPES = {
+export const PAGE_TYPES: Record<string, PageType> = {
   fortiguard_block_page: {
     name: "FortiGuard Block Page",
     fileName: "fortiguard-block-page",
