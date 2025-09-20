@@ -17,11 +17,11 @@ For example, you could input this
 
 ```html
 <h1>
-    {% if type == "dlp" %}
+    {% if type == "dlp_block_page" %}
     Transfer attempt blocked
-    {% elseif type == "virus" %}
+    {% elseif type == "virus_block_page" %}
     Virus blocked
-    {% elseif type == "application" %}
+    {% elseif type == "application_control_block_page" %}
     Application blocked
     {% else %}
     Access blocked
@@ -30,7 +30,7 @@ For example, you could input this
 <div>
     {% for detail in details %}
         <b>{{ detail.title }}</b>
-        <p>{{ detail.description }}</p>
+        <p>{{ detail.value }}</p>
     {% endfor %}
 </div>
 ```
