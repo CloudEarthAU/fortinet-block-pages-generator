@@ -640,10 +640,10 @@ export const PAGE_TYPES: Record<string, PageType> = {
     ],
     actions: [
       {
-        title: "Learn More",
+        title: "Request re-evaluation",
         location: {
-          default: VARIABLES.virus_ref_url.default,
-          variable: "%%VIRUS_REF_URL%%",
+          default: "#",
+          variable: "%%FTGD_RE_EVAL%%",
         },
       },
     ],
@@ -675,5 +675,83 @@ export const PAGE_TYPES: Record<string, PageType> = {
       },
     ],
     actions: [],
+  },
+  application_control_block_page: {
+    name: "Application Control Block Page",
+    fileName: "application-control-block-page",
+    details: [
+      {
+        title: "Application",
+        value: {
+          default: VARIABLES.appname.default,
+          variable: `%%APPNAME%%`,
+        },
+      },
+      {
+        title: "Category",
+        value: {
+          default: VARIABLES.appcat.default,
+          variable: `%%APPCAT%%`,
+        },
+      },
+      {
+        title: "URL",
+        value: {
+          default: `${VARIABLES.protocol.default}://${VARIABLES.url.default}`,
+          variable: `%%PROTOCOL%%://%%URL%%`,
+        },
+      },
+      {
+        title: "Policy",
+        value: {
+          default: VARIABLES.policy_uuid.default,
+          variable: `%%POLICY_UUID%%`,
+        },
+      },
+    ],
+    actions: [],
+  },
+  dlp_block_page: {
+    name: "Data Loss Prevention Block Page",
+    fileName: "dlp-block-page",
+    details: [
+      {
+        title: "URL",
+        value: {
+          default: `${VARIABLES.protocol.default}://${VARIABLES.url.default}`,
+          variable: `%%PROTOCOL%%://%%URL%%`,
+        },
+      },
+    ],
+    actions: [],
+  },
+  virus_block_page: {
+    name: "Virus Block Page",
+    fileName: "virus-block-page",
+    details: [
+      {
+        title: "URL",
+        value: {
+          default: `${VARIABLES.protocol.default}://${VARIABLES.url.default}`,
+          variable: `%%PROTOCOL%%://%%URL%%`,
+        },
+      },
+      {
+        title: "Quarantined File Name",
+        value: {
+          default: VARIABLES.quarfilename.default,
+          variable: `%%QUARFILENAME%%`,
+        },
+      },
+    ],
+    actions: [
+      {
+        title: "Learn more",
+        location: {
+          default: "#",
+          variable: `%%VIRUS_REF_URL%%`,
+        },
+      },
+    ],
   },
 };
