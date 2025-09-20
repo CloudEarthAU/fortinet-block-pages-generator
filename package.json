@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "@types/html-minifier-terser": "^7.0.2",
+    "@types/live-server": "^1.2.3",
     "@types/twig": "^1.12.17",
     "chokidar": "^4.0.3",
     "colors": "^1.4.0",
@@ -25,6 +26,7 @@
     "html-minifier-terser": "^7.2.0",
     "inline-source": "^8.0.3",
     "install": "^0.13.0",
+    "live-server": "^1.2.2",
     "twig": "^1.17.1"
   }
 }
