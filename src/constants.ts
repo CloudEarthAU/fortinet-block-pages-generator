@@ -646,4 +646,32 @@ export const PAGE_TYPES = {
       },
     ],
   },
+  url_block_page: {
+    name: "URL Block Page",
+    fileName: "url-block-page",
+    details: [
+      {
+        title: "URL",
+        value: {
+          default: `${VARIABLES.protocol.default}://${VARIABLES.url.default}`,
+          variable: `%%PROTOCOL%%://%%URL%%`,
+        },
+      },
+      {
+        title: "Description",
+        value: {
+          default: VARIABLES.ips_desc.default,
+          variable: `%%IPS_DESC%%`,
+        },
+      },
+      {
+        title: "URL Source",
+        value: {
+          default: VARIABLES.url_source.default,
+          variable: `%%URL_SOURCE%%`,
+        },
+      },
+    ],
+    actions: [],
+  },
 };
